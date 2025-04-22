@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function UserDetail() {
-  const { id } = useParams(); // Get the user ID from the URL params
+  const { id } = useParams(); 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch user data
+ 
   useEffect(() => {
     const fetchUserDetail = async () => {
       try {

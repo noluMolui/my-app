@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import UserList from "./components/UserList";  // We will create this
-import UserDetail from "./components/UserDetail"; // We will create this
+import UserList from "./components/UserList"; 
+import UserDetail from "./components/UserDetail";
 
 function App() {
   return (

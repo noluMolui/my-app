@@ -7,7 +7,7 @@ function UserList() {
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Fetch users from API
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,7 +23,6 @@ function UserList() {
     fetchData();
   }, []);
 
-  // Filter users based on search query
   const filteredUsers = users.filter(
     (user) =>
       user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -32,7 +31,7 @@ function UserList() {
 
   return (
     <div>
-      {/* Search Input */}
+      
       <input
         type="text"
         placeholder="Search users..."
@@ -40,11 +39,11 @@ function UserList() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       
-      {/* Loading and Error States */}
+     
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
 
-      {/* User List */}
+     
       <div className="user-list">
         {filteredUsers.map((user) => (
           <div key={user.id} className="user-card">
